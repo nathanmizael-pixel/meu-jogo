@@ -1,0 +1,8 @@
+/* Gótico de Pergaminho Vivo: cada passagem deixa uma marca de arquivo, distinta da rota ativa e do território ainda sem nome. */
+.map-canvas-expanded .region-node.visited{border-color:rgba(209,165,76,.62);background:linear-gradient(135deg,rgba(187,132,43,.18),rgba(18,25,28,.88));box-shadow:inset 3px 0 rgba(222,170,72,.72),0 0 0 1px rgba(204,152,60,.08)}
+.map-canvas-expanded .region-node.visited:not(.current) .node-icon{color:#e6c170;border-color:rgba(226,183,99,.5);background:rgba(120,83,28,.22)}
+.map-canvas-expanded .region-node.visited>div>span{color:#cdb27a}
+.passage-stamp{position:absolute;right:-9px;top:-11px;z-index:3;padding:4px 5px;border:1px dashed rgba(234,191,99,.75);background:rgba(41,27,17,.94);color:#efcf83;font:700 .48rem/1 Georgia,serif;letter-spacing:.09em;transform:rotate(5deg);box-shadow:0 3px 10px rgba(0,0,0,.35);pointer-events:none}
+.region-node.current .passage-stamp{border-color:rgba(194,162,239,.86);background:rgba(43,28,62,.94);color:#dfc6ff;transform:rotate(-4deg)}
+.map-detail .eyebrow{display:inline-flex;align-items:center;gap:5px}
+@media (max-width:760px){.passage-stamp{right:-4px;top:-8px;padding:3px 4px;font-size:.43rem}.map-canvas-expanded .region-node.visited{box-shadow:inset 2px 0 rgba(222,170,72,.72)}}

@@ -1,0 +1,52 @@
+/* Estilo: Gótico de Pergaminho Vivo. O Bestiário parece um arquivo de campo marcado por selos, não uma tabela genérica. */
+.bestiary-codex { display: grid; gap: 18px; padding: 2px 0 36px; }
+.bestiary-hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 28px; padding: 28px 30px; border: 1px solid rgba(190, 164, 110, .24); background: linear-gradient(106deg, rgba(18, 20, 21, .96), rgba(31, 31, 28, .88)), radial-gradient(circle at 84% 5%, rgba(113, 78, 140, .28), transparent 38%); box-shadow: inset 0 0 0 1px rgba(255,255,255,.025), 0 18px 36px rgba(0,0,0,.18); }
+.bestiary-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .7; background-image: linear-gradient(90deg, transparent 0 88%, rgba(196,164,102,.1) 88% 88.15%, transparent 88.15%), repeating-linear-gradient(0deg, transparent, transparent 34px, rgba(255,255,255,.022) 35px); }
+.bestiary-hero-copy, .bestiary-seal-card { position: relative; z-index: 1; }
+.bestiary-hero h2 { max-width: 730px; margin: 8px 0 9px; color: #e9dfc4; font-family: Georgia, serif; font-size: clamp(1.8rem, 3.4vw, 3rem); line-height: 1.04; letter-spacing: -.035em; }
+.bestiary-hero p { max-width: 760px; margin: 0; color: #aaa499; line-height: 1.6; }
+.bestiary-hero-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 23px; }
+.bestiary-hero-stats > span { min-width: 145px; padding: 11px 13px; border-left: 2px solid rgba(197,160,81,.65); background: rgba(0,0,0,.17); }
+.bestiary-hero-stats small, .bestiary-seal-card small { display: block; color: #827d72; font-size: 9px; letter-spacing: .12em; }
+.bestiary-hero-stats strong { display: block; margin-top: 4px; color: #ddd0af; font-size: 13px; letter-spacing: .04em; }
+.bestiary-hero-stats i { color: #8d887e; font-style: normal; }
+.bestiary-seal-card { display: grid; justify-items: center; align-content: center; min-height: 190px; padding: 17px; border: 1px solid rgba(168, 129, 198, .36); background: rgba(9, 10, 12, .44); text-align: center; }
+.bestiary-seal-card img { width: 54px; height: 54px; object-fit: contain; filter: drop-shadow(0 0 12px rgba(160, 109, 217, .35)); }
+.bestiary-seal-card > span { margin-top: 6px; color: #a391bd; font-size: 9px; line-height: 1.25; letter-spacing: .16em; }
+.bestiary-seal-card b { color: #ddd0af; font: 2.15rem/1 Georgia, serif; }
+.bestiary-seal-card button { margin-top: 13px; font-size: 11px; }
+.bestiary-protocol { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(188, 161, 109, .17); background: rgba(20, 20, 19, .58); }
+.bestiary-protocol > div { display: flex; gap: 11px; align-items: center; min-height: 64px; padding: 11px 17px; border-right: 1px solid rgba(188, 161, 109, .14); }
+.bestiary-protocol > div:last-child { border: 0; }
+.bestiary-protocol-index { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid rgba(200,166,92,.6); border-radius: 50%; color: #dbb96f; font: bold 13px Georgia, serif; }
+.bestiary-protocol strong, .bestiary-protocol small { display: block; }
+.bestiary-protocol strong { color: #d6cbae; font-size: 10px; letter-spacing: .1em; }
+.bestiary-protocol small { margin-top: 3px; color: #888277; font-size: 11px; }
+.bestiary-toolbar { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 7px 4px 0; }
+.bestiary-toolbar h3 { margin: 5px 0 0; color: #d9cfb8; font: 1.35rem Georgia, serif; }
+.bestiary-filters { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.bestiary-filters button { padding: 8px 11px; border: 1px solid rgba(187, 161, 108, .24); background: rgba(10, 11, 12, .5); color: #9e998d; font: 700 10px/1.1 inherit; letter-spacing: .08em; text-transform: uppercase; transition: border-color .16s, color .16s, transform .16s; }
+.bestiary-filters button:hover, .bestiary-filters button.active { border-color: rgba(209,173,95,.72); color: #e6c57d; }
+.bestiary-filters button:active { transform: scale(.97); }
+.bestiary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 13px; }
+.bestiary-dossier { overflow: hidden; display: grid; grid-template-columns: 116px minmax(0,1fr); min-height: 284px; border: 1px solid rgba(190, 164, 110, .19); background: linear-gradient(145deg, rgba(35,34,31,.88), rgba(17,18,19,.93)); box-shadow: 0 10px 22px rgba(0,0,0,.14); }
+.bestiary-dossier:hover { border-color: rgba(207,173,99,.43); }
+.bestiary-dossier.complete { border-color: rgba(136, 104, 177, .52); }
+.bestiary-dossier.boss { border-top: 2px solid rgba(202, 165, 81, .58); }
+.dossier-portrait-wrap { position: relative; min-height: 100%; overflow: hidden; background: #111; }
+.dossier-portrait-wrap .monster-portrait { width: 100%; height: 100%; min-height: 284px; border: 0; }
+.dossier-portrait-wrap .monster-portrait img { object-fit: cover; }
+.portrait-veiled { filter: grayscale(1) contrast(.8) brightness(.28); }
+.dossier-portrait-wrap::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent 45%, rgba(17,18,19,.96) 100%); }
+.dossier-level, .dossier-crown { position: absolute; z-index: 2; left: 7px; right: 7px; display: flex; gap: 4px; align-items: center; padding: 6px; border: 1px solid rgba(215, 182, 107, .32); background: rgba(10,10,12,.76); color: #d6bd81; font-size: 8px; letter-spacing: .08em; line-height: 1.1; }
+.dossier-level { bottom: 8px; }.dossier-crown { top: 8px; color: #ead08e; }
+.dossier-body { display: flex; min-width: 0; flex-direction: column; padding: 15px 15px 12px 12px; }
+.dossier-body > .eyebrow { color: #837b6a; }.dossier-body > h3 { margin: 6px 0; color: #9e9789; font: 1.3rem Georgia, serif; }.dossier-body > p { color: #777268; font-size: 12px; line-height: 1.55; }
+.dossier-title > span { color: #ad8fc4; font-size: 9px; font-weight: bold; letter-spacing: .13em; }.dossier-title h3 { margin: 4px 0; color: #e0d6be; font: 1.24rem Georgia, serif; line-height: 1.05; }.dossier-title small { color: #90897b; font-size: 10px; }
+.dossier-affinities { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 12px 0 8px; }.dossier-affinities span { display: grid; gap: 2px; padding: 7px; background: rgba(0,0,0,.2); font-size: 10px; letter-spacing: .05em; }.dossier-affinities b { color: #898276; font-size: 8px; }.dossier-affinities .weak { border-left: 2px solid #d17f55; color: #e4b19c; }.dossier-affinities .resist { border-left: 2px solid #6b9ba0; color: #add2d0; }
+.dossier-behavior { margin-top: 5px; }.dossier-behavior > span, .dossier-study b { color: #a49376; font-size: 8px; font-weight: bold; letter-spacing: .13em; }.dossier-behavior p { margin: 4px 0 0; color: #aca497; font-size: 11px; line-height: 1.45; }
+.dossier-study { display: grid; gap: 6px; margin-top: 11px; padding: 9px 0; border-top: 1px solid rgba(196,167,111,.14); border-bottom: 1px solid rgba(196,167,111,.14); }.dossier-study span { display: grid; gap: 2px; color: #b9b0a1; font-size: 10px; }.dossier-study b { color: #779e9c; }
+.dossier-complete { margin-top: 10px; padding: 9px; border-left: 2px solid rgba(152,111,199,.72); background: rgba(92,65,119,.09); }.dossier-complete p { margin: 0 0 6px; color: #bbb2a3; font-size: 10px; line-height: 1.4; }.dossier-complete p:last-child { margin: 0; }.dossier-complete b { color: #b395d0; font-size: 8px; letter-spacing: .1em; }
+.dossier-progress { display: flex; align-items: end; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 10px; }.dossier-progress > div { min-width: 0; flex: 1; }.dossier-progress span { display: block; overflow: hidden; color: #888175; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }.dossier-progress strong { max-width: 94px; color: #c69e61; font-size: 8px; letter-spacing: .08em; text-align: right; }.dossier-progress-track { height: 3px; margin-top: 5px; background: rgba(255,255,255,.08); }.dossier-progress-track i { display: block; height: 100%; background: linear-gradient(90deg,#a76fcb,#dcc276); }
+@media (max-width: 780px) { .bestiary-hero { grid-template-columns: 1fr; padding: 23px 18px; }.bestiary-seal-card { grid-template-columns: 48px 1fr auto; justify-items: start; min-height: 0; text-align: left; }.bestiary-seal-card img { grid-row: span 2; width: 42px; }.bestiary-seal-card b { grid-column: 3; grid-row: 1 / span 2; align-self: center; }.bestiary-seal-card button { grid-column: 1 / -1; width: 100%; margin-top: 7px; }.bestiary-protocol { grid-template-columns: 1fr; }.bestiary-protocol > div { border-right: 0; border-bottom: 1px solid rgba(188,161,109,.14); }.bestiary-protocol > div:last-child { border-bottom: 0; }.bestiary-toolbar { align-items: start; flex-direction: column; }.bestiary-filters { justify-content: flex-start; }.bestiary-grid { grid-template-columns: 1fr; }.dossier-complete p { font-size: 10px; } }
+@media (max-width: 430px) { .bestiary-hero-stats { display: grid; grid-template-columns: 1fr 1fr; }.bestiary-hero-stats > span:last-child { grid-column: 1/-1; }.bestiary-dossier { grid-template-columns: 96px minmax(0,1fr); }.dossier-portrait-wrap .monster-portrait { min-height: 300px; }.dossier-body { padding-right: 10px; }.dossier-affinities { grid-template-columns: 1fr; }.dossier-progress { align-items: start; flex-direction: column; }.dossier-progress strong { max-width: none; text-align: left; } }

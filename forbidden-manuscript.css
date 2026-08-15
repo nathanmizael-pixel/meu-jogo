@@ -1,0 +1,58 @@
+/* Gótico de Pergaminho Vivo — a interface é um manuscrito proibido: folhas, tinta, selos e cartografia revelam o avanço da expedição. */
+.content-scroll.manuscript-page { position: relative; background-image: repeating-linear-gradient(93deg, rgba(226,208,164,.018) 0 1px, transparent 1px 23px), radial-gradient(circle at 85% 12%, rgba(157,120,255,.055), transparent 22%), radial-gradient(circle at 8% 88%, rgba(184,127,54,.065), transparent 26%); box-shadow: inset 0 0 70px rgba(0,0,0,.34); }
+.content-scroll.manuscript-page::after { content: ""; position: absolute; z-index: 0; right: 4%; top: 72px; width: 240px; height: 120px; border: 1px solid rgba(223,173,91,.075); background: repeating-radial-gradient(ellipse at 50% 50%, transparent 0 19px, rgba(223,173,91,.035) 20px 21px, transparent 22px 40px); transform: rotate(-7deg); opacity: .82; pointer-events: none; }
+.content-scroll.manuscript-page > * { position: relative; z-index: 1; }
+
+.map-view .section-heading { position: relative; padding: 11px 14px 12px; border-bottom: 1px dashed rgba(223,173,91,.25); background: linear-gradient(90deg, rgba(109,73,32,.16), transparent 58%); }
+.map-view .section-heading::after { content: "CARTA VIVA · ARQUIVO DE VEYRA"; position: absolute; right: 16px; bottom: 9px; color: rgba(223,173,91,.38); font: 700 7px 'Source Sans 3'; letter-spacing: .16em; transform: rotate(-2deg); }
+.map-canvas-expanded { border-color: rgba(204,161,75,.46); background-image: repeating-linear-gradient(118deg, rgba(239,214,160,.024) 0 1px, transparent 1px 20px), radial-gradient(ellipse at 16% 75%, rgba(56,116,108,.12), transparent 34%), linear-gradient(135deg, rgba(57,43,28,.38), rgba(9,13,14,.93) 66%); box-shadow: inset 0 0 0 1px rgba(232,213,167,.04), inset 0 -42px 52px rgba(0,0,0,.27), 0 18px 36px rgba(0,0,0,.16); }
+.map-annotation { padding: 8px 11px; border-left: 3px solid rgba(223,173,91,.58); background: linear-gradient(95deg, rgba(82,49,25,.46), rgba(11,14,14,.25)); box-shadow: 0 7px 17px rgba(0,0,0,.15); }
+.map-annotation::after { content: "traço de vigília"; display: block; margin-top: 3px; color: rgba(229,222,209,.38); font: italic 10px Georgia, serif; letter-spacing: .04em; }
+
+.region-node.knowledge-unknown:not(.locked) { border-style: dashed; filter: saturate(.58) contrast(.88); opacity: .74; }
+.region-node.knowledge-unknown:not(.locked) .node-icon { border-color: rgba(159,151,133,.36); color: #a49d8d; background: rgba(41,40,36,.34); }
+.region-node.knowledge-mapped { border-color: rgba(105,176,164,.55); background: linear-gradient(125deg, rgba(44,97,91,.28), rgba(10,13,14,.9)); box-shadow: inset 3px 0 rgba(115,186,163,.55), 0 7px 16px rgba(0,0,0,.14); }
+.region-node.knowledge-absolute { border-color: rgba(223,173,91,.82); background: linear-gradient(125deg, rgba(105,70,26,.4), rgba(13,23,23,.93) 67%); box-shadow: inset 3px 0 rgba(223,173,91,.88), 0 0 0 1px rgba(223,173,91,.12), 0 8px 18px rgba(0,0,0,.18); }
+.region-node.knowledge-absolute .node-icon { color: #f1cd78; border-color: rgba(239,201,111,.7); background: rgba(129,87,25,.26); }
+.knowledge-stamp { position: absolute; right: -12px; top: -13px; z-index: 4; padding: 4px 6px; border: 1px dashed rgba(229,222,209,.45); background: rgba(24,21,17,.95); color: #beb4a0; font: 700 7px Georgia, serif; letter-spacing: .1em; transform: rotate(-6deg); pointer-events: none; }
+.knowledge-stamp.mapped { border-color: rgba(115,186,163,.72); color: #a9dacd; background: rgba(16,57,53,.94); transform: rotate(4deg); }
+.knowledge-stamp.absolute { border-color: rgba(239,201,111,.82); color: #f0d184; background: rgba(67,43,17,.95); box-shadow: 0 0 0 3px rgba(223,173,91,.075); transform: rotate(-5deg); }
+
+.map-detail { position: relative; overflow: hidden; border-color: rgba(213,177,96,.42); background-image: repeating-linear-gradient(102deg, rgba(229,222,209,.017) 0 1px, transparent 1px 21px), linear-gradient(120deg, rgba(66,46,26,.34), rgba(8,11,12,.94) 64%); }
+.map-detail::after { content: "FOLHA DE CAMPO"; position: absolute; right: 13px; bottom: 11px; color: rgba(223,173,91,.29); font: 700 7px 'Source Sans 3'; letter-spacing: .18em; transform: rotate(-4deg); pointer-events: none; }
+.map-detail-etching { position: relative; min-height: 170px; overflow: hidden; border-right: 1px solid rgba(223,173,91,.35); background: linear-gradient(132deg, rgba(69,44,21,.78), rgba(8,13,14,.9) 63%); isolation: isolate; }
+.map-detail-etching::before, .map-detail-etching::after { content: ""; position: absolute; inset: 10% 8%; z-index: -1; border: 1px solid rgba(222,183,104,.18); border-radius: 48% 52% 41% 59% / 56% 40% 60% 44%; box-shadow: 27px -18px 0 -19px rgba(222,183,104,.14), -34px 24px 0 -25px rgba(222,183,104,.1), inset 0 0 42px rgba(0,0,0,.36); transform: rotate(-14deg); }
+.map-detail-etching::after { inset: 22% 17%; border-color: rgba(110,180,162,.15); transform: rotate(17deg); }
+.etching-contours { position: absolute; inset: 0; z-index: -1; opacity: .78; background: repeating-radial-gradient(ellipse at 58% 50%, transparent 0 15px, rgba(220,187,114,.11) 16px 17px, transparent 18px 32px), linear-gradient(135deg, transparent 44%, rgba(115,186,163,.08) 44.5% 45%, transparent 45.5%); mask-image: linear-gradient(90deg, #000, transparent 96%); }
+.map-detail-etching span, .map-detail-etching strong, .map-detail-etching i { position: absolute; left: 18px; right: 18px; }
+.map-detail-etching span { top: 18px; color: rgba(232,207,147,.64); font: 700 7px 'Source Sans 3'; letter-spacing: .14em; }
+.map-detail-etching strong { bottom: 33px; color: #e2c982; font: 700 15px/1.18 'Cinzel', serif; letter-spacing: .05em; text-shadow: 0 2px 8px #000; }
+.map-detail-etching i { bottom: 17px; color: #8cb5aa; font: italic 10px Georgia, serif; }
+.map-detail-etching img { position: absolute; right: 14px; bottom: 16px; width: 32px; height: 32px; padding: 3px; border: 1px solid rgba(157,120,255,.55); background: rgba(15,10,25,.62); filter: sepia(.45) drop-shadow(0 0 7px rgba(157,120,255,.46)); transform: rotate(-8deg); }
+.map-detail-etching.tone-forest { background: linear-gradient(132deg, rgba(29,68,54,.7), rgba(8,13,14,.92) 64%); }.map-detail-etching.tone-swamp { background: linear-gradient(132deg, rgba(27,65,60,.75), rgba(8,13,14,.92) 64%); }.map-detail-etching.tone-mountain { background: linear-gradient(132deg, rgba(66,61,52,.75), rgba(8,13,14,.92) 64%); }.map-detail-etching.tone-dead { background: linear-gradient(132deg, rgba(67,57,43,.74), rgba(8,13,14,.92) 64%); }
+.knowledge-summary { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 10px; align-items: start; margin: 12px 0 2px; padding: 9px; border: 1px solid rgba(229,222,209,.14); border-left: 3px solid rgba(159,151,133,.54); background: rgba(6,9,10,.42); }
+.knowledge-summary.mapped { border-left-color: rgba(115,186,163,.72); background: linear-gradient(100deg, rgba(35,91,83,.23), rgba(6,9,10,.48)); }
+.knowledge-summary.absolute { border-left-color: rgba(223,173,91,.85); background: linear-gradient(100deg, rgba(103,67,27,.29), rgba(6,9,10,.48)); }
+.knowledge-summary img { width: 28px; height: 28px; opacity: .7; filter: sepia(.6) drop-shadow(0 0 6px rgba(223,173,91,.28)); }
+.knowledge-summary span { display: block; color: #c6b68d; font: 700 8px 'Source Sans 3'; letter-spacing: .13em; }
+.knowledge-summary strong { display: block; margin-top: 2px; color: var(--bone); font: 600 12px 'Cinzel', serif; }
+.knowledge-summary p { grid-column: 1 / -1; margin: 0; color: #b7ae9d; font: italic 12px/1.45 Georgia, serif; }
+.knowledge-stages { display: flex; gap: 5px; margin-top: 9px; }
+.knowledge-stages span { padding: 3px 5px; border: 1px solid rgba(229,222,209,.12); color: #77756f; font: 700 7px 'Source Sans 3'; letter-spacing: .08em; }
+.knowledge-stages span.active { border-color: rgba(223,173,91,.58); color: #ecd08d; background: rgba(124,82,29,.2); }
+.knowledge-stages span.active.mapped { border-color: rgba(115,186,163,.55); color: #a8d4c9; background: rgba(42,100,91,.16); }
+
+.manuscript-field-note { display: inline-flex; align-items: center; gap: 7px; margin-top: 7px; padding: 5px 8px; border-left: 2px solid rgba(223,173,91,.58); color: #c0b39c; background: linear-gradient(90deg, rgba(78,51,25,.19), transparent); font: italic 11px Georgia, serif; }
+.manuscript-field-note.mapped { border-left-color: rgba(115,186,163,.68); color: #a9cbc3; }
+.manuscript-field-note.absolute { border-left-color: rgba(223,173,91,.86); color: #e4c77e; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .content-scroll.manuscript-page { animation: manuscript-page-unseal 360ms cubic-bezier(.23,1,.32,1) both; transform-origin: left center; }
+  .knowledge-summary p { animation: manuscript-ink 620ms 120ms cubic-bezier(.23,1,.32,1) both; }
+  .knowledge-stamp.absolute { animation: manuscript-seal 1.9s ease-in-out infinite; }
+}
+@keyframes manuscript-page-unseal { from { opacity: .15; transform: perspective(1000px) rotateY(-2deg) translateX(-8px); } to { opacity: 1; transform: perspective(1000px) rotateY(0) translateX(0); } }
+@keyframes manuscript-ink { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes manuscript-seal { 0%,100% { box-shadow: 0 0 0 3px rgba(223,173,91,.07); } 50% { box-shadow: 0 0 0 6px rgba(223,173,91,.02), 0 0 14px rgba(223,173,91,.2); } }
+@media (max-width: 760px) { .content-scroll.manuscript-page::after { width: 140px; height: 90px; right: -30px; top: 44px; opacity: .42; }.map-view .section-heading { padding: 9px 10px; }.map-view .section-heading::after { display: none; }.knowledge-stamp { right: -5px; top: -9px; padding: 3px 4px; font-size: 6px; }.map-detail-etching { min-height: 124px; border-right: 0; border-bottom: 1px solid rgba(223,173,91,.28); }.map-detail-etching strong { bottom: 27px; font-size: 12px; }.map-detail-etching span { top: 14px; font-size: 6px; }.map-detail-etching i { bottom: 13px; font-size: 9px; }.knowledge-summary { margin-top: 9px; padding: 8px; }.knowledge-summary strong { font-size: 10px; }.knowledge-summary p { font-size: 11px; }.knowledge-stages { flex-wrap: wrap; }.knowledge-stages span { font-size: 6px; }.manuscript-field-note { font-size: 10px; } }
+@media (prefers-reduced-motion: reduce) { .content-scroll.manuscript-page, .knowledge-summary p, .knowledge-stamp.absolute { animation: none !important; transition: none !important; } }

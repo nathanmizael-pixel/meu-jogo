@@ -1,0 +1,276 @@
+/* Estilo: Gótico de Pergaminho Vivo — controles e registros são instrumentos selados de expedição, nunca uma HUD genérica. */
+.soundscape-strip {
+  position: relative;
+  display: block;
+  min-width: 13.5rem;
+  padding: 0;
+  color: #c9c0a7;
+  border: 1px solid rgba(158, 129, 63, 0.28);
+  background:
+    linear-gradient(90deg, rgba(78, 55, 24, 0.24), rgba(10, 15, 15, 0.88)),
+    repeating-linear-gradient(-21deg, transparent 0 7px, rgba(222, 188, 109, 0.025) 7px 8px);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+.soundscape-strip summary {
+  display: flex;
+  align-items: center;
+  gap: 0.58rem;
+  min-height: 2.28rem;
+  padding: 0.34rem 0.55rem 0.34rem 0.45rem;
+  cursor: pointer;
+  list-style: none;
+}
+.soundscape-strip summary::-webkit-details-marker { display: none; }
+.soundscape-strip summary:focus-visible { outline: 1px solid #bd86ff; outline-offset: -3px; }
+.soundscape-mark {
+  width: 1.52rem;
+  height: 1.52rem;
+  display: grid;
+  place-items: center;
+  flex: none;
+  color: #bd86ff;
+  border: 1px solid rgba(189, 134, 255, 0.38);
+  background: rgba(84, 40, 112, 0.16);
+  box-shadow: inset 0 0 12px rgba(120, 74, 170, 0.2);
+}
+.soundscape-reading { display: grid; min-width: 0; flex: 1; line-height: 1.05; }
+.soundscape-reading small {
+  overflow: hidden;
+  color: #998e75;
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.soundscape-reading strong {
+  overflow: hidden;
+  margin-top: 0.14rem;
+  color: #e3d9c2;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.61rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.soundscape-expand {
+  color: #b99b54;
+  font-size: 0.48rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.soundscape-mixer {
+  position: absolute;
+  z-index: 24;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  display: grid;
+  width: 15.2rem;
+  gap: 0.43rem;
+  padding: 0.72rem;
+  border: 1px solid rgba(158, 129, 63, 0.45);
+  background:
+    linear-gradient(145deg, rgba(34, 24, 33, 0.99), rgba(8, 13, 13, 0.98)),
+    repeating-linear-gradient(-21deg, transparent 0 7px, rgba(222, 188, 109, 0.025) 7px 8px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.42), inset 0 0 0 1px rgba(0, 0, 0, 0.52);
+}
+.soundscape-mixer::before {
+  content: "MESA DE ESCUTA · PREFERÊNCIAS SALVAS";
+  margin-bottom: 0.15rem;
+  color: #b99b54;
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.soundscape-mixer label {
+  display: grid;
+  grid-template-columns: 4.7rem 1fr;
+  align-items: center;
+  gap: 0.45rem;
+  color: #c9c0a7;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.soundscape-mixer input { width: 100%; accent-color: #bd86ff; cursor: pointer; }
+.soundscape-strip.is-muted { opacity: 0.6; }
+.soundscape-strip.is-locked .soundscape-mark { color: #b99b54; border-color: rgba(185, 155, 84, 0.42); }
+
+@media (max-width: 880px) {
+  .soundscape-strip { min-width: 0; max-width: 11.2rem; }
+  .soundscape-expand { display: none; }
+}
+@media (max-width: 580px) {
+  .soundscape-strip { min-width: 2.35rem; }
+  .soundscape-reading { display: none; }
+  .soundscape-strip summary { padding-inline: 0.42rem; }
+  .soundscape-mixer { position: fixed; top: auto; right: 0.72rem; left: 0.72rem; bottom: 4.4rem; width: auto; }
+}
+
+/* Instrumentos do topo: sinetes de campo, com numeração de inventário e resposta física discreta. */
+.top-actions {
+  position: relative;
+  align-items: stretch;
+  padding: 0.18rem 0.22rem;
+  border: 1px solid rgba(196, 159, 82, 0.16);
+  background:
+    repeating-linear-gradient(96deg, transparent 0 10px, rgba(229, 210, 165, 0.025) 10px 11px),
+    linear-gradient(90deg, rgba(62, 42, 25, 0.22), rgba(5, 9, 11, 0.62));
+  box-shadow: inset 0 1px rgba(245, 221, 171, 0.055), inset 0 -1px rgba(0, 0, 0, 0.62);
+}
+.top-actions::before {
+  content: "INSTRUMENTOS · 07";
+  position: absolute;
+  right: 0.45rem;
+  top: -0.52rem;
+  padding: 0 0.24rem;
+  color: rgba(210, 174, 99, 0.48);
+  background: #0b0e10;
+  font: 800 0.39rem/1 "Source Sans 3", sans-serif;
+  letter-spacing: 0.15em;
+}
+.top-actions > .icon-button,
+.top-actions > .save-button {
+  position: relative;
+  min-width: 2.15rem;
+  min-height: 2.08rem;
+  border: 1px solid rgba(199, 171, 110, 0.3);
+  border-radius: 0;
+  color: #cfc1a1;
+  background:
+    linear-gradient(135deg, rgba(236, 209, 148, 0.07), transparent 42%),
+    rgba(11, 15, 16, 0.8);
+  box-shadow: inset 0 1px rgba(246, 225, 181, 0.06), inset 0 -7px 12px rgba(0, 0, 0, 0.22);
+}
+.top-actions > .icon-button::after,
+.top-actions > .save-button::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid rgba(223, 173, 91, 0.5);
+  transform: rotate(45deg);
+}
+.top-actions > .save-button {
+  gap: 0.35rem;
+  padding-inline: 0.6rem;
+  color: #e2c888;
+  font: 700 0.62rem/1 "Cinzel", Georgia, serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.top-actions > .icon-button:hover,
+.top-actions > .save-button:hover {
+  border-color: rgba(230, 189, 103, 0.7);
+  color: #f1d89c;
+  background: linear-gradient(135deg, rgba(210, 150, 55, 0.18), rgba(22, 32, 31, 0.82));
+  transform: translateY(-1px);
+}
+.top-actions > .icon-button:active,
+.top-actions > .save-button:active { transform: scale(0.97); }
+
+/* Carimbo autoral: a coroa de osso e chama ancora a leitura da expedição, sem competir com o alvo sentenciado. */
+.brand-lockup {
+  position: relative;
+  align-items: center;
+  padding: 0.3rem 0.45rem 0.34rem 0.18rem;
+}
+.brand-lockup::after {
+  content: "SELO DO ARQUIVISTA";
+  position: absolute;
+  right: 0.18rem;
+  bottom: -0.08rem;
+  color: rgba(190, 145, 255, 0.48);
+  font: 800 0.38rem/1 "Source Sans 3", sans-serif;
+  letter-spacing: 0.16em;
+}
+.brand-sigil {
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(189, 134, 255, 0.56);
+  background: radial-gradient(circle, rgba(157, 120, 255, 0.14), rgba(7, 10, 12, 0.18) 66%);
+  box-shadow: 0 0 0 4px rgba(157, 120, 255, 0.05), 0 0 0 8px rgba(223, 173, 91, 0.025), 0 0 28px rgba(157, 120, 255, 0.24);
+}
+.top-actions::after {
+  content: "SELOS · PRONTOS";
+  position: absolute;
+  left: 0.42rem;
+  bottom: -0.46rem;
+  color: rgba(188, 160, 99, 0.32);
+  font: 800 0.36rem/1 "Source Sans 3", sans-serif;
+  letter-spacing: 0.14em;
+  pointer-events: none;
+}
+
+/* Registros de recurso: placas oxidadas, anotações e selos em vez de barras de HUD limpas. */
+.player-strip > .resource-group,
+.player-strip > .xp-group,
+.player-strip > .currency {
+  overflow: hidden;
+  border: 1px solid rgba(195, 164, 105, 0.2);
+  border-left: 3px solid rgba(197, 150, 79, 0.52);
+  background:
+    repeating-linear-gradient(106deg, transparent 0 16px, rgba(226, 202, 149, 0.025) 16px 17px),
+    linear-gradient(115deg, rgba(74, 56, 33, 0.25), rgba(8, 12, 13, 0.76) 56%, rgba(43, 59, 54, 0.16));
+  box-shadow: inset 0 1px rgba(247, 224, 177, 0.055), inset 0 -10px 16px rgba(0, 0, 0, 0.14);
+}
+.player-strip > .resource-group::before,
+.player-strip > .xp-group::before,
+.player-strip > .currency::before {
+  position: absolute;
+  right: 0.45rem;
+  top: 0.3rem;
+  color: rgba(218, 184, 111, 0.36);
+  font: 800 0.4rem/1 "Source Sans 3", sans-serif;
+  letter-spacing: 0.13em;
+}
+.player-strip > .resource-group::before { content: "REGISTRO VITAL"; }
+.player-strip > .xp-group::before { content: "LIVRO DE PROGRESSO"; }
+.player-strip > .currency::before { content: "COFRE 03"; }
+.player-strip .bar {
+  position: relative;
+  border: 1px solid rgba(219, 189, 132, 0.22);
+  background: rgba(2, 5, 6, 0.66);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.18);
+}
+.player-strip .bar::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  pointer-events: none;
+  background: repeating-linear-gradient(90deg, transparent 0 21%, rgba(229, 217, 190, 0.12) 21.5% 22%);
+}
+.player-strip .resource-label,
+.player-strip .xp-group .resource-label,
+.player-strip .currency > span {
+  color: rgba(203, 182, 138, 0.68);
+  font-size: 0.45rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+.tactical-heading,
+.combat-card-top h2,
+.combat-card-top h3 {
+  text-shadow: 0 1px 0 rgba(255,255,255,.08), 0 0 18px rgba(223,173,91,.1);
+}
+.combat-card .combat-target-reading,
+.encounter-strip {
+  border-image: linear-gradient(90deg, rgba(223,173,91,.6), rgba(157,120,255,.38), rgba(223,173,91,.12)) 1;
+}
+@media (max-width: 760px) {
+  .top-actions { padding: 0.12rem; }
+  .top-actions::before { display: none; }
+  .top-actions > .icon-button,
+  .top-actions > .save-button { min-width: 2rem; }
+  .player-strip > .resource-group::before,
+  .player-strip > .xp-group::before,
+  .player-strip > .currency::before { font-size: 0.34rem; }
+  .brand-sigil { width: 50px; height: 50px; }
+  .brand-lockup::after,
+  .top-actions::after { display: none; }
+}

@@ -1,0 +1,121 @@
+/* Gótico de Pergaminho Vivo — toda superfície do campo é uma carta, etiqueta ou selo encontrado em guerra. */
+.brand-sigil { width: 58px; height: 58px; padding: 4px; border: 1px solid rgba(223,173,91,.42); background: radial-gradient(circle, rgba(157,120,255,.18), rgba(11,13,15,.82) 66%); box-shadow: inset 0 0 0 2px rgba(229,222,209,.06), 0 0 0 4px rgba(157,120,255,.045), 0 12px 24px rgba(0,0,0,.28); filter: drop-shadow(0 0 12px rgba(157,120,255,.48)); }
+
+.nav-item.active { position: relative; border-color: rgba(157,120,255,.62); background: linear-gradient(90deg, rgba(157,120,255,.16), rgba(223,173,91,.055)); }
+.nav-item.active .nav-sigil { width: 26px; height: 26px; filter: sepia(.35) drop-shadow(0 0 8px rgba(157,120,255,.8)); }
+.nav-item.active::after { content: "✦"; position: absolute; right: 9px; top: 50%; display: grid; width: 23px; height: 23px; place-items: center; border: 1px solid rgba(223,173,91,.62); border-radius: 50%; color: #d9bd78; background: radial-gradient(circle, rgba(157,120,255,.5) 0 17%, rgba(12,13,18,.98) 19% 100%); font: 700 16px Georgia, serif; transform: translateY(-50%) rotate(-8deg); box-shadow: inset 0 0 0 3px rgba(157,120,255,.1), 0 0 9px rgba(157,120,255,.52); opacity: .96; pointer-events: none; }
+
+.combat-station { position: relative; isolation: isolate; overflow: hidden; border-color: rgba(223,173,91,.62); box-shadow: inset 0 0 0 1px rgba(229,222,209,.055), inset 0 -38px 50px rgba(0,0,0,.24), 0 18px 44px rgba(0,0,0,.2); }
+.combat-station::after { content: ""; position: absolute; z-index: 0; right: -6%; top: 45px; width: 39%; height: 73%; border: 1px solid rgba(223,173,91,.12); background: repeating-radial-gradient(ellipse at 70% 52%, transparent 0 20px, rgba(223,173,91,.055) 21px 22px, transparent 23px 42px), linear-gradient(125deg, rgba(157,120,255,.075), transparent 52%); box-shadow: inset 0 0 0 7px rgba(9,12,14,.16); clip-path: polygon(10% 0, 100% 0, 100% 88%, 64% 100%, 0 87%, 5% 32%); opacity: .82; pointer-events: none; }
+.combat-station > * { position: relative; z-index: 1; }
+
+.combat-station .tactical-heading { position: relative; min-height: 39px; padding: 8px 100px 8px 48px; border-top: 1px dashed rgba(223,173,91,.24); border-bottom-color: rgba(223,173,91,.3); background: linear-gradient(90deg, rgba(73,53,32,.34), rgba(10,13,14,.25) 68%, transparent); }
+.combat-station .tactical-heading::after { content: "PLACA DE ATLAS · FRENTE DE VIGÍLIA"; position: absolute; right: 12px; bottom: 8px; color: rgba(223,173,91,.48); font: 700 7px 'Source Sans 3'; letter-spacing: .16em; transform: rotate(-2deg); }
+.combat-world-proof { position: relative; display: grid; grid-template-columns: 88px minmax(0,1fr) 92px 34px; gap: 10px; align-items: stretch; min-height: 78px; margin: 8px 10px 0; overflow: hidden; border: 1px solid rgba(223,173,91,.5); border-left: 4px solid rgba(223,173,91,.82); background: linear-gradient(105deg, rgba(78,52,28,.58), rgba(13,21,21,.9) 48%, rgba(43,92,85,.31)), repeating-linear-gradient(120deg, rgba(230,207,154,.06) 0 1px, transparent 1px 18px); box-shadow: inset 0 0 0 1px rgba(229,222,209,.055), inset 0 -18px 24px rgba(0,0,0,.22), 0 10px 24px rgba(0,0,0,.16); }
+.combat-world-proof::before { content: ""; position: absolute; inset: 0; background: repeating-radial-gradient(ellipse at 62% 55%, transparent 0 19px, rgba(223,173,91,.08) 20px 21px, transparent 22px 39px), linear-gradient(90deg, transparent, rgba(157,120,255,.09) 66%, transparent); opacity: .78; pointer-events: none; }
+.combat-world-proof > * { position: relative; z-index: 1; }
+.world-proof-art { width: 100%; height: 100%; min-height: 78px; object-fit: cover; border-right: 1px solid rgba(223,173,91,.34); filter: grayscale(.28) sepia(.24) contrast(1.08); mix-blend-mode: screen; opacity: .86; }
+.world-proof-copy { align-self: center; min-width: 0; }
+.world-proof-copy span, .world-proof-coordinates span { display: block; color: rgba(232,205,145,.63); font: 700 7px 'Source Sans 3'; letter-spacing: .16em; }
+.world-proof-copy strong { display: block; margin-top: 4px; color: #ead6a0; font: 700 15px/1.1 'Cinzel', serif; letter-spacing: .04em; }
+.world-proof-copy p { margin: 4px 0 0; color: #b9b4a2; font: italic 10px/1.25 Georgia, serif; }
+.world-proof-coordinates { align-self: center; padding-left: 10px; border-left: 1px dashed rgba(223,173,91,.28); }
+.world-proof-coordinates b { display: block; margin: 2px 0; color: #d8c69c; font: 700 17px 'Cinzel', serif; }
+.world-proof-coordinates small { color: #81aaa1; font: italic 9px Georgia, serif; }
+.world-proof-sigil { align-self: center; width: 29px; height: 29px; padding: 2px; border: 1px solid rgba(157,120,255,.64); background: rgba(15,10,24,.64); filter: drop-shadow(0 0 8px rgba(157,120,255,.55)); transform: rotate(-8deg); }
+.combat-station .station-vital { position: relative; overflow: hidden; border-color: rgba(229,222,209,.19); background-image: repeating-linear-gradient(90deg, rgba(223,173,91,.035) 0 1px, transparent 1px 14px), linear-gradient(125deg, rgba(229,222,209,.06), rgba(5,8,9,.73) 54%, rgba(85,66,42,.13)); box-shadow: inset 0 1px rgba(255,239,205,.075), inset 0 -12px 18px rgba(0,0,0,.16); }
+.combat-station .station-vital::after { position: absolute; right: 7px; top: 5px; color: rgba(229,222,209,.27); font: 700 6px 'Source Sans 3'; letter-spacing: .14em; }
+.combat-station .station-vital:nth-child(1)::after { content: "ETIQUETA // AMEAÇA"; }
+.combat-station .station-vital:nth-child(2)::after { content: "REGISTRO // VITAL"; }
+.combat-station .station-vital:nth-child(3)::after { content: "SELO // RITUAL"; color: rgba(157,120,255,.52); }
+
+.combat-station .combat-target-brief { position: relative; min-height: 92px; border-top-color: rgba(223,173,91,.52); background-image: linear-gradient(105deg, rgba(100,68,36,.4), rgba(9,12,14,.88) 43%, rgba(50,93,89,.22)), repeating-linear-gradient(170deg, transparent 0 27px, rgba(223,173,91,.045) 28px 29px); }
+.combat-station .combat-target-brief::after { content: "✦"; position: absolute; right: 9px; top: 7px; display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid rgba(157,120,255,.72); border-radius: 50%; color: #dec487; background: radial-gradient(circle, rgba(157,120,255,.56) 0 14%, rgba(14,10,24,.96) 16% 100%); font: 700 18px Georgia, serif; box-shadow: inset 0 0 0 3px rgba(157,120,255,.12), 0 0 8px rgba(157,120,255,.58); opacity: .9; pointer-events: none; }
+.combat-station .combat-target-identity h3 { font-size: 18px; letter-spacing: .035em; }
+.combat-station .station-primary-strike { min-height: 51px; padding: 13px 48px 0 17px; font: 700 13px 'Cinzel', serif; letter-spacing: .055em; background: linear-gradient(90deg, rgba(223,173,91,.3), rgba(119,77,33,.16) 46%, rgba(229,222,209,.045)); box-shadow: inset 3px 0 rgba(223,173,91,.85), inset 0 1px rgba(255,237,194,.16), 0 8px 18px rgba(0,0,0,.25); }
+.combat-station .station-primary-strike::before { content: "ORDEM DE SENTENÇA"; position: absolute; left: 17px; top: 5px; color: rgba(255,228,174,.57); font: 700 6px 'Source Sans 3'; letter-spacing: .15em; }
+.combat-station .tactical-spell { border-left-color: rgba(229,222,209,.28); background-image: linear-gradient(105deg, rgba(229,222,209,.04), transparent 55%), repeating-linear-gradient(90deg, transparent 0 11px, rgba(229,222,209,.022) 12px 13px); }
+.combat-station .spell-tactics { border-left: 2px solid rgba(157,120,255,.62); }
+.combat-station .player-tactics, .combat-station .spell-tactics { position: relative; padding-top: 17px; border-top: 1px solid rgba(223,173,91,.32); background-image: linear-gradient(105deg, rgba(89,58,27,.16), transparent 46%), repeating-linear-gradient(90deg, transparent 0 18px, rgba(223,173,91,.026) 19px 20px); }
+.combat-station .player-tactics::before, .combat-station .spell-tactics::before { position: absolute; left: 11px; top: 5px; color: rgba(223,173,91,.52); font: 700 6px 'Source Sans 3'; letter-spacing: .16em; }
+.combat-station .player-tactics::before { content: "PLACA OXIDADA · REAÇÃO"; }
+.combat-station .spell-tactics::before { content: "FOLHA RITUAL · COMANDOS SELADOS"; color: rgba(157,120,255,.64); }
+
+/* Revisão de hierarquia — a carta da ameaça abre o campo; os instrumentos entram como anotações de apoio. */
+@media (min-width: 761px) {
+  .brand-sigil { width: 68px; height: 68px; padding: 5px; border-color: rgba(223,173,91,.68); }
+  .nav-item.active .nav-sigil { width: 31px; height: 31px; }
+  .nav-item.active::after { width: 28px; height: 28px; right: 7px; }
+
+  .combat-station { padding-top: 4px; }
+  .combat-world-proof { grid-template-columns: 148px minmax(0,1fr) 112px 48px; min-height: 132px; margin: 10px 12px 2px; border-left-width: 6px; box-shadow: inset 0 0 0 1px rgba(229,222,209,.09), inset 0 -25px 32px rgba(0,0,0,.3), 0 15px 28px rgba(0,0,0,.24); }
+  .combat-world-proof::before { background: repeating-radial-gradient(ellipse at 62% 55%, transparent 0 25px, rgba(223,173,91,.13) 26px 27px, transparent 28px 51px), repeating-linear-gradient(150deg, transparent 0 17px, rgba(229,222,209,.045) 18px 19px), linear-gradient(90deg, rgba(95,66,32,.2), transparent 34%, rgba(157,120,255,.08) 72%, transparent); opacity: .94; }
+  .combat-world-proof::after { content: "PROVA DE CAMPO · MAPA RASGADO · SENTENÇA REGISTRADA"; position: absolute; right: 66px; bottom: 9px; z-index: 2; color: rgba(232,205,145,.45); font: 700 7px 'Source Sans 3', sans-serif; letter-spacing: .22em; transform: rotate(-1.6deg); pointer-events: none; }
+  .world-proof-art { min-height: 132px; filter: grayscale(.22) sepia(.38) contrast(1.12) brightness(.87); opacity: .98; }
+  .world-proof-copy span, .world-proof-coordinates span { font-size: 8px; letter-spacing: .2em; }
+  .world-proof-copy strong { margin-top: 7px; font-size: 22px; letter-spacing: .055em; text-shadow: 0 2px 0 rgba(0,0,0,.5); }
+  .world-proof-copy p { max-width: 43rem; margin-top: 6px; font-size: 12px; }
+  .world-proof-coordinates { padding-left: 14px; }
+  .world-proof-coordinates b { font-size: 24px; }
+  .world-proof-coordinates small { font-size: 10px; }
+  .world-proof-sigil { width: 42px; height: 42px; padding: 3px; border-width: 2px; box-shadow: 0 0 0 4px rgba(223,173,91,.09), 0 0 14px rgba(157,120,255,.58); }
+
+  .combat-station .station-vitals { position: relative; margin: 8px 12px 0; opacity: .84; }
+  .combat-station .station-vital { min-height: 64px; border-style: solid; }
+  .combat-station .combat-target-brief { margin: 8px 12px 0; min-height: 106px; border-left: 3px solid rgba(223,173,91,.68); }
+  .combat-station .combat-target-brief::after { width: 36px; height: 36px; right: 12px; top: 10px; font-size: 21px; }
+  .combat-station .combat-target-identity h3 { font-size: 20px; }
+  .combat-station .player-tactics, .combat-station .spell-tactics { opacity: .92; }
+  .combat-station .station-primary-strike { min-height: 58px; font-size: 14px; }
+}
+
+@media (max-width: 760px) {
+  .brand-sigil { width: 42px; height: 42px; }
+  .nav-item.active::after { display: none; }
+  .combat-station::after { width: 53%; height: 45%; top: 34px; right: -13%; opacity: .44; }
+  .combat-station .tactical-heading { min-height: 23px; padding: 5px 34px 5px 43px; }
+  .combat-station .tactical-heading::after, .combat-station .station-vital::after { display: none; }
+  .combat-world-proof { grid-template-columns: 58px minmax(0,1fr) 48px 25px; min-height: 61px; margin: 6px 7px 0; gap: 7px; }
+  .world-proof-art { min-height: 61px; }.world-proof-copy strong { font-size: 11px; }.world-proof-copy p { display: none; }.world-proof-copy span, .world-proof-coordinates span { font-size: 5px; }.world-proof-coordinates { padding-left: 5px; }.world-proof-coordinates b { font-size: 12px; }.world-proof-coordinates small { display: none; }.world-proof-sigil { width: 22px; height: 22px; }
+  .combat-station .combat-target-brief { min-height: 0; }
+  .combat-station .combat-target-identity h3 { font-size: 14px; }
+  .combat-station .station-primary-strike { min-height: 45px; padding-top: 12px; font-size: 11px; }
+}
+
+/* Revisão material de campanha: atlas primeiro; placas, dossiês e notas respondem como instrumentos presos à prova. */
+@media (min-width: 761px) {
+  .brand-sigil { width: 78px; height: 78px; padding: 6px; border-color: rgba(223,173,91,.76); box-shadow: inset 0 0 0 2px rgba(229,222,209,.1), 0 0 0 6px rgba(157,120,255,.055), 0 16px 30px rgba(0,0,0,.42); }
+  .combat-station .tactical-heading { margin-bottom: -2px; padding-left: 58px; background: linear-gradient(90deg, rgba(85,61,31,.56), rgba(18,24,24,.42) 58%, transparent); }
+  .combat-world-proof { grid-template-columns: 190px minmax(0,1fr) 126px 58px; min-height: 168px; margin: 12px 14px -4px; border-left-width: 8px; background: linear-gradient(104deg, rgba(94,64,32,.72), rgba(16,29,29,.96) 48%, rgba(43,92,85,.4)), repeating-linear-gradient(120deg, rgba(230,207,154,.075) 0 1px, transparent 1px 18px); box-shadow: inset 0 0 0 1px rgba(242,222,172,.16), inset 0 -32px 38px rgba(0,0,0,.38), 0 20px 34px rgba(0,0,0,.3); }
+  .combat-world-proof::before { background: repeating-radial-gradient(ellipse at 64% 54%, transparent 0 30px, rgba(223,173,91,.15) 31px 32px, transparent 33px 59px), repeating-linear-gradient(152deg, transparent 0 19px, rgba(229,222,209,.06) 20px 21px), linear-gradient(90deg, rgba(123,82,37,.24), transparent 38%, rgba(157,120,255,.07) 74%, transparent); }
+  .world-proof-art { min-height: 168px; filter: grayscale(.2) sepia(.44) contrast(1.16) brightness(.82); }
+  .world-proof-copy strong { font-size: 25px; letter-spacing: .07em; }.world-proof-copy p { max-width: 49rem; font-size: 12px; }.world-proof-coordinates b { font-size: 27px; }.world-proof-sigil { width: 50px; height: 50px; padding: 4px; border-width: 2px; box-shadow: 0 0 0 5px rgba(223,173,91,.11), 0 0 18px rgba(157,120,255,.68); }
+  .combat-station .station-vitals { z-index: 2; display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; margin:0 26px; transform:translateY(-14px); opacity:.97; box-shadow:0 10px 20px rgba(0,0,0,.34); }
+  .combat-station .station-vital { min-height:58px; border-color:rgba(136,112,72,.64); background-image:linear-gradient(145deg, rgba(73,65,51,.92), rgba(15,19,19,.94) 62%), repeating-linear-gradient(90deg, rgba(223,173,91,.08) 0 1px, transparent 1px 14px); }
+  .combat-station .station-vital:nth-child(1) { border-left:3px solid #c49b4e; }.combat-station .station-vital:nth-child(2) { border-left:3px solid #72998f; }.combat-station .station-vital:nth-child(3) { border-left:3px solid #9d78ff; }
+  .combat-station .combat-target-brief { margin:0 14px 10px; padding-top:12px; border:1px solid rgba(223,173,91,.5); border-left:5px solid rgba(223,173,91,.78); background-image:linear-gradient(105deg, rgba(89,59,32,.6), rgba(10,15,16,.94) 45%, rgba(37,76,71,.31)), repeating-linear-gradient(170deg, transparent 0 26px, rgba(223,173,91,.06) 27px 28px); box-shadow:inset 0 0 0 1px rgba(237,211,147,.07),0 8px 20px rgba(0,0,0,.22); }
+  .combat-station .combat-target-brief::before { content:"DOSSIÊ SELADO · AMEAÇA SENTENCIADA"; position:absolute; left:15px; top:5px; color:rgba(230,195,122,.6); font:700 6px 'Source Sans 3'; letter-spacing:.2em; }
+  .combat-station .combat-target-brief::after { width:42px; height:42px; right:13px; top:12px; font-size:23px; box-shadow:inset 0 0 0 4px rgba(157,120,255,.15),0 0 0 3px rgba(223,173,91,.08),0 0 13px rgba(157,120,255,.72); }
+  .combat-station .player-tactics { margin-left:14px; background-image:linear-gradient(105deg, rgba(81,66,43,.38), transparent 48%),repeating-linear-gradient(90deg, transparent 0 18px, rgba(223,173,91,.06) 19px 20px); }.combat-station .spell-tactics { margin-right:14px; background-image:linear-gradient(105deg, rgba(48,31,75,.36), transparent 48%),repeating-linear-gradient(90deg, transparent 0 18px, rgba(157,120,255,.05) 19px 20px); }
+}
+
+/* Passo de acabamento: a leitura é carta do mundo, dossiê sentenciado e só então instrumentos. */
+@media (min-width: 761px) {
+  .combat-station { background: linear-gradient(180deg, rgba(20,25,24,.92), rgba(7,10,11,.98) 68%); }
+  .combat-station .tactical-heading { min-height: 48px; padding-top: 11px; border-bottom: 2px solid rgba(223,173,91,.42); }
+  .combat-station .tactical-heading h2, .combat-station .tactical-heading h3 { color: #ecd9a8; font-size: 18px; letter-spacing: .105em; text-shadow: 0 2px 0 rgba(0,0,0,.7); }
+  .combat-world-proof { min-height: 184px; margin-top: 14px; border-top: 2px solid rgba(240,218,155,.28); border-bottom: 2px solid rgba(240,218,155,.18); clip-path: polygon(0 0, 100% 0, 100% 94%, 96% 100%, 8% 100%, 0 96%); }
+  .world-proof-art { min-height: 184px; filter: grayscale(.12) sepia(.48) contrast(1.19) brightness(.9); }
+  .world-proof-copy strong { font-size: 28px; line-height: 1; letter-spacing: .085em; }
+  .world-proof-copy p { color: #d1c6ad; font-size: 12.5px; }
+  .world-proof-coordinates { background: linear-gradient(90deg, transparent, rgba(50,105,96,.14)); }
+  .world-proof-sigil { width: 58px; height: 58px; border-color: rgba(223,173,91,.88); background: radial-gradient(circle, rgba(157,120,255,.66), rgba(14,10,24,.98) 58%); box-shadow: 0 0 0 6px rgba(223,173,91,.12), 0 0 23px rgba(157,120,255,.82); }
+  .combat-station .station-vitals { margin-inline: 38px; transform: translateY(-18px); background: rgba(13,17,17,.95); }
+  .combat-station .station-vitals::before { content: "REGISTRO DE CAMPO · RECURSOS ANOTADOS"; position: absolute; left: 12px; top: -13px; color: rgba(223,173,91,.62); font: 800 6px 'Source Sans 3'; letter-spacing: .21em; }
+  .combat-station .station-vital { min-height: 62px; background-image: linear-gradient(145deg, rgba(70,62,49,.96), rgba(12,16,16,.98) 62%), repeating-linear-gradient(90deg, rgba(223,173,91,.09) 0 1px, transparent 1px 14px); }
+  .combat-station .combat-target-brief { margin-inline: 20px; margin-bottom: 14px; min-height: 118px; border-left-width: 7px; background-image: linear-gradient(104deg, rgba(78,47,30,.82), rgba(10,15,16,.97) 43%, rgba(27,62,57,.38)), repeating-linear-gradient(170deg, transparent 0 26px, rgba(223,173,91,.075) 27px 28px); }
+  .combat-station .combat-target-identity h3 { color: #f0dba4; font-size: 23px; letter-spacing: .08em; }
+  .combat-station .combat-target-brief::after { width: 48px; height: 48px; border-color: rgba(223,173,91,.82); }
+  .combat-station .player-tactics { margin-left: 20px; border-top-color: rgba(185,155,84,.55); background-color: rgba(45,40,28,.18); }
+  .combat-station .spell-tactics { margin-right: 20px; border-left-color: rgba(157,120,255,.82); background-color: rgba(51,31,78,.16); }
+}

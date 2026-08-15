@@ -1,0 +1,132 @@
+/* Gótico de Pergaminho Vivo — pacto, câmara e sigilo declaram um reino; barras jamais substituem a prova material do lugar. */
+.kingdom-doctrine-ledger {
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(224, 185, 110, .1) 0 1px, transparent 1px 8px),
+    linear-gradient(112deg, rgba(77, 48, 24, .62), rgba(13, 16, 17, .94) 50%, rgba(31, 34, 30, .96));
+}
+
+.kingdom-doctrine-ledger::after {
+  content: "SELO DE SOBERANIA · COROA / CHAMA";
+  position: absolute;
+  right: 1.45rem;
+  bottom: .85rem;
+  color: rgba(224, 189, 114, .42);
+  font: 700 .5rem/1.2 Cinzel, serif;
+  letter-spacing: .2em;
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.doctrine-ledger-heading::before {
+  content: "✦";
+  display: grid;
+  place-items: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  margin-right: .85rem;
+  border: 1px solid rgba(220, 183, 108, .48);
+  outline: 1px solid rgba(214, 180, 107, .16);
+  outline-offset: 4px;
+  color: #e5bd6e;
+  font-size: 1.05rem;
+  box-shadow: inset 0 0 18px rgba(191, 139, 64, .16);
+}
+
+.doctrine-line {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(225, 190, 123, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .52);
+  background:
+    linear-gradient(105deg, rgba(220, 183, 108, .08) 0 2px, transparent 2px 100%),
+    rgba(9, 11, 11, .54);
+}
+
+.doctrine-line::after {
+  content: "REGISTRO DE AFINIDADE";
+  position: absolute;
+  right: .65rem;
+  bottom: .45rem;
+  color: rgba(223, 199, 153, .28);
+  font: 700 .42rem/1 Cinzel, serif;
+  letter-spacing: .15em;
+}
+
+.citadel-interior {
+  isolation: isolate;
+  background-image:
+    linear-gradient(90deg, rgba(198, 153, 78, .07) 1px, transparent 1px),
+    linear-gradient(rgba(198, 153, 78, .035) 1px, transparent 1px);
+  background-size: 8px 8px, 8px 8px;
+}
+
+.citadel-interior .citadel-interior-topbar {
+  position: relative;
+  background: linear-gradient(90deg, rgba(37, 27, 17, .94), rgba(13, 16, 16, .9));
+  box-shadow: inset 0 -1px rgba(221, 179, 99, .25), 0 7px 0 rgba(0, 0, 0, .14);
+}
+
+.citadel-interior .citadel-interior-topbar::after {
+  content: "✦  PROVA DE LUGAR · BASE DE VEYRA";
+  position: absolute;
+  right: 1rem;
+  bottom: -1.05rem;
+  z-index: 3;
+  padding: .24rem .48rem;
+  border: 1px solid rgba(207, 166, 89, .35);
+  background: #19140e;
+  color: #d6b26d;
+  font: 700 .43rem/1 Cinzel, serif;
+  letter-spacing: .15em;
+}
+
+.citadel-interior .interior-room-mark {
+  border: 1px solid rgba(224, 184, 105, .6);
+  background: linear-gradient(135deg, rgba(35, 27, 17, .95), rgba(12, 15, 16, .85));
+  box-shadow: 0 0 0 4px rgba(5, 7, 7, .46), 0 10px 22px rgba(0, 0, 0, .35);
+}
+
+.citadel-interior .interior-room-mark::after {
+  content: "SELO DE CÂMARA";
+  display: block;
+  margin-top: .28rem;
+  color: #d8b36b;
+  font: 700 .4rem/1 Cinzel, serif;
+  letter-spacing: .14em;
+}
+
+.citadel-interior .interior-room-proof {
+  border: 1px solid rgba(214, 173, 90, .6);
+  background:
+    linear-gradient(135deg, transparent 0 68%, rgba(218, 177, 94, .16) 68% 69%, transparent 69%),
+    linear-gradient(115deg, rgba(20, 16, 10, .96), rgba(68, 48, 22, .84));
+  box-shadow: 0 0 0 4px rgba(8, 10, 10, .48), inset 0 0 21px rgba(204, 152, 69, .13);
+}
+
+.citadel-interior.interior-altar .citadel-interior-scene {
+  box-shadow: inset 0 0 0 1px rgba(157, 120, 255, .28), inset 0 -90px 100px rgba(57, 31, 76, .44);
+}
+
+.citadel-interior.interior-altar .interior-room-proof {
+  border-color: rgba(172, 137, 255, .72);
+  background:
+    radial-gradient(circle at 72% 28%, rgba(157, 120, 255, .28), transparent 38%),
+    linear-gradient(115deg, rgba(24, 15, 30, .98), rgba(64, 37, 75, .9));
+}
+
+.citadel-interior.interior-forge .interior-room-proof { border-color: rgba(218, 153, 73, .78); background: linear-gradient(115deg, rgba(37, 20, 12, .98), rgba(90, 45, 19, .82)); }
+.citadel-interior.interior-crypt .interior-room-proof { border-color: rgba(193, 199, 174, .64); background: linear-gradient(115deg, rgba(21, 26, 22, .98), rgba(61, 70, 56, .82)); }
+.citadel-interior.interior-library .interior-room-proof { border-color: rgba(114, 167, 160, .7); background: linear-gradient(115deg, rgba(13, 30, 31, .98), rgba(31, 70, 68, .82)); }
+.citadel-interior.interior-garden .interior-room-proof { border-color: rgba(122, 147, 83, .7); background: linear-gradient(115deg, rgba(20, 31, 18, .98), rgba(53, 76, 39, .82)); }
+
+.citadel-interior.doctrine-corruption .interior-doctrine { box-shadow: inset 4px 0 #9d78ff, 0 8px 18px rgba(50, 24, 69, .22); }
+.citadel-interior.doctrine-order .interior-doctrine { box-shadow: inset 4px 0 #d7aa63, 0 8px 18px rgba(91, 59, 22, .2); }
+.citadel-interior.doctrine-soul .interior-doctrine { box-shadow: inset 4px 0 #a6d0ca, 0 8px 18px rgba(27, 74, 72, .2); }
+.citadel-interior.doctrine-death .interior-doctrine { box-shadow: inset 4px 0 #dbcfac, 0 8px 18px rgba(74, 69, 54, .2); }
+
+@media (max-width: 700px) {
+  .citadel-interior .citadel-interior-topbar::after { right: .7rem; font-size: .37rem; }
+  .doctrine-ledger-heading::before { width: 2rem; height: 2rem; float: right; margin: 0 0 .5rem .7rem; }
+  .kingdom-doctrine-ledger::after { display: none; }
+}

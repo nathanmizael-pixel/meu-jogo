@@ -1,0 +1,2 @@
+/* Gótico de Pergaminho Vivo: os botões do pátio distinguem entrar em uma sala de elevar sua pedra ritual. */
+.citadel-building-actions{display:flex;gap:6px}.citadel-building-actions .citadel-enter{border-color:rgba(185,152,214,.52);background:rgba(85,52,110,.22);color:#e0ccef}.citadel-building-actions .citadel-enter:hover{border-color:rgba(223,193,248,.8);background:rgba(103,64,133,.33)}@media(max-width:650px){.citadel-building-actions{width:100%;justify-content:flex-end}.citadel-building footer{align-items:flex-end}}

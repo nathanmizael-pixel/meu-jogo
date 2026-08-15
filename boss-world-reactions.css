@@ -1,0 +1,12 @@
+/* Design: Gótico de Pergaminho Vivo — rumores de coroas reanimadas são lâminas de papel, violeta de eclipse e sal reativo. */
+.boss-rumor-ledger { margin: 18px 0; border: 1px solid rgba(195, 157, 84, .34); background: linear-gradient(130deg, rgba(47, 35, 18, .66), rgba(12, 15, 18, .86)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.025); }
+.boss-rumor-ledger header { display: flex; justify-content: space-between; gap: 12px; padding: 12px 15px; border-bottom: 1px solid rgba(195, 157, 84, .22); color: #dfc27d; font: 700 10px/1.2 var(--font-mono, monospace); letter-spacing: .13em; }
+.boss-rumor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px; background: rgba(207, 178, 108, .16); }
+.boss-rumor-card { padding: 15px; background: linear-gradient(160deg, rgba(20, 23, 26, .97), rgba(33, 28, 20, .94)); }
+.boss-rumor-card span { display: block; color: #c9a85d; font-size: 10px; letter-spacing: .12em; }
+.boss-rumor-card h4 { margin: 7px 0; color: #f0e5cd; font: 500 17px/1.12 var(--font-display, Georgia, serif); }
+.boss-rumor-card p { margin: 0; color: #c4c0b8; font-size: 12px; line-height: 1.48; }
+.boss-rumor-card small { display: block; margin-top: 10px; color: #d3bc87; font-size: 10px; line-height: 1.35; }
+.boss-rumor-strip { margin: 11px 0 0; display: flex; align-items: flex-start; gap: 9px; padding: 11px 12px; border-left: 2px solid #c9a85d; background: rgba(134, 104, 43, .14); color: #d7caa9; font-size: 12px; line-height: 1.45; }
+.boss-rumor-strip strong { display: block; color: #f0e4cb; font-weight: 600; }
+@media (max-width: 640px) { .boss-rumor-ledger { margin: 13px 0; } .boss-rumor-grid { grid-template-columns: 1fr; } .boss-rumor-card { padding: 13px; } .boss-rumor-card h4 { font-size: 16px; } }

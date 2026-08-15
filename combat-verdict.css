@@ -1,0 +1,77 @@
+/* Estilo do arquivo: Manuscrito Necromântico — cada desfecho é um auto lavrado no pergaminho da expedição. */
+.combat-verdict-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 82;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: radial-gradient(circle at 50% 38%, rgba(103, 66, 127, .2), transparent 34%), rgba(8, 8, 12, .76);
+  backdrop-filter: blur(8px);
+}
+
+.combat-verdict-modal {
+  position: relative;
+  width: min(680px, 100%);
+  overflow: hidden;
+  color: #251b19;
+  background:
+    linear-gradient(120deg, rgba(100, 57, 45, .12), transparent 28%),
+    repeating-linear-gradient(0deg, rgba(70, 42, 29, .025) 0 1px, transparent 1px 6px),
+    #d8c69f;
+  border: 1px solid rgba(235, 202, 125, .7);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, .6), inset 0 0 0 5px rgba(91, 53, 33, .14);
+  clip-path: polygon(0 12px, 12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.combat-verdict-modal::after {
+  content: "";
+  position: absolute;
+  right: -2rem;
+  bottom: -2.6rem;
+  width: 13rem;
+  height: 13rem;
+  border: 1px solid rgba(80, 37, 29, .28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 9px rgba(80, 37, 29, .07), 0 0 0 18px rgba(80, 37, 29, .05);
+  pointer-events: none;
+}
+
+.verdict-header { position: relative; z-index: 1; display: flex; gap: 1rem; align-items: center; padding: 1.45rem 1.55rem 1.1rem; border-bottom: 1px solid rgba(74, 41, 27, .22); }
+.verdict-seal { display: grid; width: 3.6rem; height: 3.6rem; place-items: center; color: #f4deb0; background: #582e2b; border: 3px double #d4a65b; border-radius: 50%; box-shadow: 0 3px 0 rgba(31, 13, 14, .35); transform: rotate(-8deg); }
+.verdict-seal svg { filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .35)); }
+.verdict-header h2 { margin: .15rem 0 0; font-family: "Cinzel", Georgia, serif; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: .04em; }
+.verdict-header .eyebrow { color: #75452c; }
+.verdict-intro { position: relative; z-index: 1; margin: 0; padding: 1.05rem 1.55rem; color: #5c3e2f; font-style: italic; line-height: 1.55; }
+.verdict-list { position: relative; z-index: 1; display: grid; gap: .65rem; margin: 0; padding: 0 1.55rem 1.2rem; list-style: none; }
+.verdict-list li { display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start; padding: .8rem .85rem; background: rgba(255, 246, 218, .48); border-left: 3px solid #7b3e35; box-shadow: 1px 2px 0 rgba(74, 41, 27, .1); }
+.verdict-list li > svg { margin-top: .15rem; color: #743530; }
+.verdict-list strong { display: block; font-family: "Cinzel", Georgia, serif; font-size: .86rem; letter-spacing: .06em; }
+.verdict-list p { margin: .22rem 0 0; color: #684835; font-size: .84rem; line-height: 1.4; }
+.verdict-reward { display: flex; flex-wrap: wrap; gap: .42rem; margin-top: .45rem; }
+.verdict-reward span { padding: .18rem .4rem; color: #4a2a1d; background: #e8d4a6; border: 1px solid rgba(88, 46, 43, .22); font-size: .68rem; font-weight: 800; letter-spacing: .07em; }
+.verdict-record { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 1.55rem 1.25rem; border-top: 1px dashed rgba(74, 41, 27, .32); border-bottom: 1px dashed rgba(74, 41, 27, .32); }
+.verdict-record span { padding: .7rem .45rem; text-align: center; border-right: 1px solid rgba(74, 41, 27, .16); }
+.verdict-record span:last-child { border-right: 0; }
+.verdict-record b { display: block; color: #542a24; font-family: "Cinzel", Georgia, serif; font-size: 1.05rem; }
+.verdict-record small { color: #725039; font-size: .6rem; letter-spacing: .06em; }
+.verdict-actions { position: relative; z-index: 1; display: flex; justify-content: flex-end; padding: 0 1.55rem 1.45rem; }
+.verdict-empty { position: relative; z-index: 1; margin: 0 1.55rem 1.25rem; padding: .85rem; color: #674433; background: rgba(255, 246, 218, .4); border-left: 3px solid #967044; font-size: .85rem; }
+.defeat-verdict-line { margin: .9rem 0 0; padding: .72rem .8rem; color: rgba(247, 224, 191, .82); background: rgba(81, 24, 27, .38); border-left: 2px solid #c5724e; font-size: .8rem; line-height: 1.45; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .combat-verdict-backdrop { animation: verdict-fade .24s cubic-bezier(.23, 1, .32, 1) both; }
+  .combat-verdict-modal { animation: verdict-unseal .36s cubic-bezier(.23, 1, .32, 1) both; }
+  .verdict-seal { animation: seal-set .44s .12s cubic-bezier(.23, 1, .32, 1) both; }
+}
+@keyframes verdict-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes verdict-unseal { from { opacity: 0; transform: translateY(14px) scale(.975); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes seal-set { from { opacity: 0; transform: rotate(-18deg) scale(.85); } to { opacity: 1; transform: rotate(-8deg) scale(1); } }
+@media (max-width: 600px) {
+  .combat-verdict-backdrop { align-items: end; padding: .7rem; }
+  .verdict-header, .verdict-intro { padding-left: 1rem; padding-right: 1rem; }
+  .verdict-list { padding-left: 1rem; padding-right: 1rem; }
+  .verdict-record { margin-left: 1rem; margin-right: 1rem; }
+  .verdict-record small { font-size: .54rem; }
+  .verdict-actions { padding: 0 1rem 1.1rem; }
+}

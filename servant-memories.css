@@ -1,0 +1,24 @@
+/* Estilo do arquivo: Gótico de Pergaminho Vivo — cada memória é uma prova material de que a legião possui passado, não apenas atributos. */
+.servant-memory-ledger { margin: 1.1rem 0 1.45rem; padding: 1.1rem; border: 1px solid rgba(210, 171, 108, .22); background: linear-gradient(135deg, rgba(32, 24, 24, .92), rgba(14, 17, 22, .94)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.025); }
+.servant-memory-ledger > header { display: flex; align-items: flex-end; justify-content: space-between; gap: .8rem; padding-bottom: .85rem; border-bottom: 1px solid rgba(210, 171, 108, .17); }
+.servant-memory-ledger h3 { margin: .22rem 0 0; font-family: var(--font-display, Georgia, serif); font-size: 1.25rem; color: #ead9bc; }
+.servant-memory-ledger > header > span { color: #ad8a56; font-size: .65rem; letter-spacing: .12em; }
+.servant-memory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-top: .9rem; }
+.servant-memory-card { position: relative; overflow: hidden; min-height: 220px; padding: 1rem; border: 1px solid rgba(173, 130, 78, .27); background: linear-gradient(145deg, rgba(72, 41, 45, .34), rgba(12, 15, 20, .9)); }
+.servant-memory-card::after { content: ""; position: absolute; right: -30px; bottom: -46px; width: 122px; height: 122px; border: 1px solid rgba(185, 126, 188, .2); border-radius: 50%; box-shadow: 0 0 0 18px rgba(185, 126, 188, .045), 0 0 0 36px rgba(185, 126, 188, .025); pointer-events: none; }
+.servant-memory-card > header { display: flex; align-items: flex-start; gap: .7rem; }
+.servant-memory-monogram { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid rgba(220, 169, 102, .46); color: #e1b36d; font-family: Georgia, serif; font-weight: 700; }
+.servant-memory-card header span { display: block; color: #b5884e; font-size: .59rem; letter-spacing: .12em; }
+.servant-memory-card h4 { margin: .14rem 0; color: #f0dfc4; font-family: var(--font-display, Georgia, serif); font-size: 1.05rem; }
+.servant-memory-card header small { color: #9b8da0; font-size: .68rem; }
+.servant-memory-origin { margin: .9rem 0 .7rem; color: #bba78a; font-size: .78rem; line-height: 1.5; }
+.servant-memory-pages { display: grid; gap: .45rem; position: relative; z-index: 1; }
+.servant-memory-page { padding: .55rem .6rem; border-left: 2px solid rgba(172, 121, 174, .62); background: rgba(255,255,255,.028); }
+.servant-memory-page span { display: block; color: #c49c63; font-size: .58rem; letter-spacing: .11em; }
+.servant-memory-page strong { display: block; margin-top: .14rem; color: #dcc9b0; font-size: .77rem; }
+.servant-memory-page p { margin: .32rem 0 0; color: #a89b8b; font-size: .72rem; line-height: 1.45; }
+.servant-memory-page em { display: block; margin-top: .28rem; color: #bc86bc; font-size: .65rem; font-style: normal; }
+.servant-memory-empty { display: flex; gap: .65rem; align-items: center; margin-top: .85rem; color: #a79681; font-size: .8rem; }
+.servant-memory-empty svg { color: #b98ac0; }
+@media (max-width: 1040px) { .servant-memory-grid { grid-template-columns: 1fr; } .servant-memory-card { min-height: 0; } }
+@media (max-width: 600px) { .servant-memory-ledger { padding: .85rem; } .servant-memory-ledger > header { align-items: flex-start; flex-direction: column; } }
