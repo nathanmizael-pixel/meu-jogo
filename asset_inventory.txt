@@ -1,0 +1,8 @@
+necromancer-realms-boss-v2.png
+necromancer-realms-hero.png
+necromancer-realms-map-ashen.png
+necromancer-realms-map-darkwood.png
+necromancer-realms-map-deadlands.png
+necromancer-realms-map-mountain.png
+necromancer-realms-map-swamp.png
+necromancer-realms-region-v2.png

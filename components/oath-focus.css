@@ -1,0 +1,11 @@
+/* Gótico de Pergaminho Vivo: após o voto, a árvore ativa ocupa um campo de leitura próprio. */
+.specialization-grid.single-tree {
+  grid-template-columns: minmax(0, 620px);
+  justify-content: start;
+}
+
+@media (max-width: 820px) {
+  .specialization-grid.single-tree {
+    grid-template-columns: 1fr;
+  }
+}

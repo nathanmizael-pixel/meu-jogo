@@ -1,0 +1,7 @@
+/** Gótico de Pergaminho Vivo: dossiês de servos marcantes, tinta violeta e páginas de legado. */
+import { BookOpen } from "lucide-react";
+import { personalServantsInLegion } from "@/lib/servantMemories";
+
+export function ServantMemoryLedger({ records }: { records: ReturnType<typeof personalServantsInLegion> }) {
+  return <section className="servant-memory-ledger" aria-label="Memórias dos Mortos"><header><div><span className="eyebrow violet"><BookOpen size={12} /> MEMÓRIAS DOS MORTOS</span><h3>Alguns mortos ainda sabem quem foram.</h3></div><span>{records.reduce((total, record) => total + record.memories.length, 0)} páginas recuperadas</span></header>{records.length ? <div className="servant-memory-grid">{records.map(({ servant, profile, memories }) => profile && <article className="servant-memory-card" key={servant.uid}><header><div className="servant-memory-monogram">{profile.trueName.slice(0, 1)}</div><div><span>{profile.marker}</span><h4>{profile.trueName}, {profile.epithet}</h4><small>{profile.legacyTitle}</small></div></header><p className="servant-memory-origin">{profile.originLine}</p><div className="servant-memory-pages">{memories.map((memory) => <div className="servant-memory-page" key={memory.id}><span>{memory.seal}</span><strong>{memory.title}</strong><p>{memory.text}</p><em>{memory.bonus}</em></div>)}</div></article>)}</div> : <div className="servant-memory-empty"><BookOpen size={17} /><span>Recrute um servo marcado pela história para abrir as primeiras páginas de sua vida anterior.</span></div>}</section>;
+}
